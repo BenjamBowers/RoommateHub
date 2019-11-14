@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Example</title>
+		<link rel="stylesheet" type="text/css" href="choreBoard.css">
+		<title>Chore Board</title>
 	</head>
 	<body>
 		<h1>Chore Board</h1>
-		<h2>hi</h2>
+		<h2>Date</h2>
 
-
-		<input type="checkbox">Done?</input>
-
-		<div class="BenB">
-			<h3 id="BenBName">Ben B</h3>
-			<div class="BenBChores">	
-				<input type="checkbox">Done?</input>
-				<input type="checkbox">Done?</input>
-				<input type="checkbox">Done?</input>
-				<input type="checkbox">Done?</input>
-			</div>
-			<h3 id="BenBConfirm">NO</h3>
-		</div>
+		<table>
+			<tr>
+				<th>Person</th>
+				<th>Dailey Chores</th>
+				<th>Done?</th>
+			</tr>
+			<tr>
+				<td>Ben B</td>
+				<td>
+					<ul>
+						<li><input type="checkbox">dishes</input></li>
+						<li><input type="checkbox">trash</input></li>
+						<li><input type="checkbox">pay the troll</input></li>
+					</ul>
+				</td>
+				<td>NO</td>
+			</tr>
+		</table>
 
 		<script>
 			const date = new Date();
@@ -93,7 +99,7 @@
 			}
 
 			const header2 = document.querySelector('h2');
-			header2.textContent = weekDay + ', ' + month + monthDay;
+			header2.textContent = weekDay + ', ' + month + ' ' +  monthDay;
 		</script>
 	</body>
 </html>

@@ -1,0 +1,46 @@
+html {
+	background-color: DarkSlateGray;
+	color: white;
+}
+
+input {
+	display: inline;
+	border-style: solid;
+	border-color: red;
+}
+
+.BenB {
+	display: inline;	
+	border-style:solid;
+	border-color: red;
+	padding: 100px;
+	margin: 0px;
+}
+
+#chart {
+	text-align: center;
+	margin: 100px;
+}
+
+h1, h2 {
+	text-align: center;
+	padding: 10px;
+	font-size: 3rem;
+}
+
+td, th {
+	border: 1px solid white;
+	text-align: left;
+	padding: 50px;
+	font-size: 2rem;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+ul {
+	list-style-type: none;
+}
