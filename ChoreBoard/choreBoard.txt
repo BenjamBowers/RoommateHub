@@ -1,0 +1,61 @@
+Name: Ben B
+W1:
+Su:
+Dishes
+M:
+Trash
+Tu:
+Clean Fridge
+W:
+Stove
+Th:
+Clean Bong
+F:
+Sweep floor
+Sa:
+Dust
+W2:
+Su:
+Dishes
+M:
+Trash
+Tu:
+Clean Fridge
+W:
+Stove
+Th:
+Clean Bong
+F:
+Sweep floor
+Sa:
+Dust
+W3:
+Su:
+Dishes
+M:
+Trash
+Tu:
+Clean Fridge
+W:
+Stove
+Th:
+Clean Bong
+F:
+Sweep floor
+Sa:
+Dust
+W4:
+Su:
+Dishes
+M:
+Trash
+Tu:
+Clean Fridge
+W:
+Stove
+Th:
+Clean Bong
+F:
+Sweep floor
+Sa:
+Dust
