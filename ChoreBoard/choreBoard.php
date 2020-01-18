@@ -27,6 +27,8 @@
 			</tr>
 		</table>
 
+		<div class="editBtn"><a href="EditChores/EditCHores.php">Edit Chores</a></div>
+
 		<script>
 			const date = new Date();
 			var month = ''; //The name of month
@@ -100,6 +102,8 @@
 
 			const header2 = document.querySelector('h2');
 			header2.textContent = weekDay + ', ' + month + ' ' +  monthDay;
+
+			const inputs = document.getElementsByTag
 		</script>
 	</body>
 </html>

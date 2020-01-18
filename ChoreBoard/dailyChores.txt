@@ -1,0 +1,4 @@
+1 dishes
+2 trash
+3 stove
+4 fridge

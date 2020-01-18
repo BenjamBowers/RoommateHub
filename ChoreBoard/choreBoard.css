@@ -1,6 +1,7 @@
 html {
 	background-color: DarkSlateGray;
 	color: white;
+	font-family: "Comic Sans MS", cursive, sans-serif; 
 }
 
 input {
@@ -43,4 +44,26 @@ table {
 
 ul {
 	list-style-type: none;
+}
+
+.editBtn {
+	text-align: center;
+	margin-top: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: DarkSlateGray;
+	background-color: white;
+	padding: 8px 18px;
+	font-size: 2rem;
+	display: inline-block;
+}
+
+a:hover {
+	background-color: AliceBlue;
+}
+
+a:active {
+	margin-top: 0.4rem;
 }
