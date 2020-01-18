@@ -7,11 +7,17 @@
 	<body>
 		<h1>Chore Board</h1>
 		<h2>Date</h2>
+		<?php
+			$file = fopen("BenB/monday.txt", "r");
+			$line = fgets($file);
+			echo "<h2>".$line."</h2>";
+			echo "<h2>".date("l")."</h2>";
+		?>
 
 		<table>
 			<tr>
 				<th>Person</th>
-				<th>Dailey Chores</th>
+				<th>Daily Chores</th>
 				<th>Done?</th>
 			</tr>
 			<tr>
