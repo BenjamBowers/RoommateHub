@@ -1,13 +1,7 @@
 html {
 	background-color: DarkSlateGray;
 	color: white;
-	font-family: "Comic Sans MS", cursive, sans-serif; 
-}
-
-input {
-	display: inline;
-	border-style: solid;
-	border-color: red;
+	font-family: "Helvetica", cursive, sans-serif; 
 }
 
 .BenB {
@@ -66,4 +60,14 @@ a:hover {
 
 a:active {
 	margin-top: 0.4rem;
+}
+
+.checked {
+	color: white;
+	background-color: green;
+}
+
+.unchecked {
+	color: white;
+	background-color: red;
 }

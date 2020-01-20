@@ -7,109 +7,132 @@
 	<body>
 		<h1>Chore Board</h1>
 		<h2>Date</h2>
-		<?php
-			$file = fopen("BenB/monday.txt", "r");
-			$line = fgets($file);
-			echo "<h2>".$line."</h2>";
-			echo "<h2>".date("l")."</h2>";
-		?>
 
 		<table>
 			<tr>
 				<th>Person</th>
 				<th>Daily Chores</th>
-				<th>Done?</th>
 			</tr>
 			<tr>
 				<td>Ben B</td>
-				<td>
-					<ul>
-						<li><input type="checkbox">dishes</input></li>
-						<li><input type="checkbox">trash</input></li>
-						<li><input type="checkbox">pay the troll</input></li>
-					</ul>
-				</td>
-				<td>NO</td>
+				<?php
+						$tz = 'America/Indiana/Indianapolis';
+						$timestamp = time();
+						$dt = new DateTime("now", new DateTimeZone($tz));
+						$dt->setTimestamp($timestamp);
+						$day = $dt->format('l');
+						$day = strtolower($day).".txt"; //file name based on day of week
+						$file = fopen("BenB/".$day, "r"); //handle for the file
+
+						echo "<td id=\"BenB\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						while (!feof($file)) { //Makes a list for each of chores for each week day
+							$line = fgets($file);
+							if ($line != "") {
+								$slash = explode("/", $line);
+								if ($slash[1] == "c") {
+									echo "<li>"."<input type=\"button\" class=\"checked\" value=\"&#10003\" onclick=\"check(this)\">".$slash[0]."</li>";
+								} else {
+									echo "<li>"."<input type=\"button\" class=\"unchecked\" value=\"X\" onclick=\"check(this)\">".$slash[0]."</li>";
+								}
+							}
+						}//end while
+						fclose($file);
+						echo "</ul>";
+				?>
+			</tr>
+			<tr>
+				<td>Ben K</td>
+				<?php
+						$tz = 'America/Indiana/Indianapolis';
+						$timestamp = time();
+						$dt = new DateTime("now", new DateTimeZone($tz));
+						$dt->setTimestamp($timestamp);
+						$day = $dt->format('l');
+						$day = strtolower($day).".txt"; //file name based on day of week
+						$file = fopen("BenK/".$day, "r"); //handle for the file
+
+						echo "<td id=\"BenK\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						while (!feof($file)) { //Makes a list for each of chores for each week day
+							$line = fgets($file);
+							if ($line != "") {
+								$slash = explode("/", $line);
+								if ($slash[1] == "c") {
+									echo "<li>"."<input type=\"button\" class=\"checked\" value=\"&#10003\" onclick=\"check(this)\">".$slash[0]."</li>";
+								} else {
+									echo "<li>"."<input type=\"button\" class=\"unchecked\" value=\"X\" onclick=\"check(this)\">".$slash[0]."</li>";
+								}
+							}
+						}//end while
+						fclose($file);
+						echo "</ul>";
+				?>
+			</tr>
+			<tr>
+				<td>Evan</td>
+				<?php
+						$tz = 'America/Indiana/Indianapolis';
+						$timestamp = time();
+						$dt = new DateTime("now", new DateTimeZone($tz));
+						$dt->setTimestamp($timestamp);
+						$day = $dt->format('l');
+						$day = strtolower($day).".txt"; //file name based on day of week
+						$file = fopen("Evan/".$day, "r"); //handle for the file
+
+						echo "<td id=\"Evan\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						while (!feof($file)) { //Makes a list for each of chores for each week day
+							$line = fgets($file);
+							if ($line != "") {
+								$slash = explode("/", $line);
+								if ($slash[1] == "c") {
+									echo "<li>"."<input type=\"button\" class=\"checked\" value=\"&#10003\" onclick=\"check(this)\">".$slash[0]."</li>";
+								} else {
+									echo "<li>"."<input type=\"button\" class=\"unchecked\" value=\"X\" onclick=\"check(this)\">".$slash[0]."</li>";
+								}
+							}
+						}//end while
+						fclose($file);
+						echo "</ul>";
+				?>
+			</tr>
+			<tr>
+				<td>Juan</td>
+				<?php
+						$tz = 'America/Indiana/Indianapolis';
+						$timestamp = time();
+						$dt = new DateTime("now", new DateTimeZone($tz));
+						$dt->setTimestamp($timestamp);
+						$day = $dt->format('l');
+						$day = strtolower($day).".txt"; //file name based on day of week
+						$file = fopen("Juan/".$day, "r"); //handle for the file
+
+						echo "<td id=\"Juan\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						while (!feof($file)) { //Makes a list for each of chores for each week day
+							$line = fgets($file);
+							if ($line != "") {
+								$slash = explode("/", $line);
+								if ($slash[1] == "c") {
+									echo "<li>"."<input type=\"button\" class=\"checked\" value=\"&#10003\" onclick=\"check(this)\">".$slash[0]."</li>";
+								} else {
+									echo "<li>"."<input type=\"button\" class=\"unchecked\" value=\"X\" onclick=\"check(this)\">".$slash[0]."</li>";
+								}
+							}
+						}//end while
+						fclose($file);
+						echo "</ul>";
+				?>
 			</tr>
 		</table>
 
-		<div class="editBtn"><a href="EditChores/EditCHores.php">Edit Chores</a></div>
+		<div class="editBtn"><a href="EditChores/EditChores.php">Edit Chores</a></div>
 
-		<script>
-			const date = new Date();
-			var month = ''; //The name of month
-			var monthDay = date.getDate(); //Day of the month (number)
-			var weekDay = ''; //The day of the week
-
-			switch(date.getMonth()) {
-				case 0:
-					month = 'January';
-					break;
-				case 1:
-					month = 'February';
-					break;
-				case 2:
-					month = 'March';
-					break;
-				case 3:
-					month = 'April';
-					break;
-				case 4:
-					month = 'May';
-					break;
-				case 5:
-					month = 'June';
-					break;
-				case 6:
-					month = 'July';
-					break;
-				case 7:
-					month = 'August';
-					break;
-				case 8:
-					month = 'September';
-					break;
-				case 9:
-					month = 'October';
-					break;
-				case 10:
-					month = 'November';
-					break;
-				case 11:
-					month = 'December';
-					break;
-				default:
-					month = 'undefined';
-			}
-
-			switch(date.getDay()) {
-				case 0:
-					weekDay = 'Sunday';
-					break;
-				case 1:
-					weekDay = 'Monday';
-					break;
-				case 2:
-					weekDay = 'Tuesday';
-					break;
-				case 3:
-					weekDay = 'Wednesday';
-					break;
-				case 4:
-					weekDay = 'Thursday';
-					break;
-				case 5:
-					weekDay = 'Friday';
-					break;
-				case 6:
-					weekDay = 'Saturday';
-
-			}
-
-			const header2 = document.querySelector('h2');
-			header2.textContent = weekDay + ', ' + month + ' ' +  monthDay;
-
-			const inputs = document.getElementsByTag
-		</script>
+		<script src="choreBoard.js"></script>
 	</body>
 </html>
