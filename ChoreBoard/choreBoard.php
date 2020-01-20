@@ -24,9 +24,9 @@
 						$day = strtolower($day).".txt"; //file name based on day of week
 						$file = fopen("BenB/".$day, "r"); //handle for the file
 
-						echo "<td id=\"BenB\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+						echo "<td id=\"BenB\">"; //Store name as id to be retreived by addChore function (choreBoard.js)
 
-						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (choreBoard.js)
 						while (!feof($file)) { //Makes a list for each of chores for each week day
 							$line = fgets($file);
 							if ($line != "") {
@@ -53,9 +53,9 @@
 						$day = strtolower($day).".txt"; //file name based on day of week
 						$file = fopen("BenK/".$day, "r"); //handle for the file
 
-						echo "<td id=\"BenK\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+						echo "<td id=\"BenK\">"; //Store name as id to be retreived by addChore function (choreBoard.js)
 
-						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (choreBoard.js)
 						while (!feof($file)) { //Makes a list for each of chores for each week day
 							$line = fgets($file);
 							if ($line != "") {
@@ -82,9 +82,9 @@
 						$day = strtolower($day).".txt"; //file name based on day of week
 						$file = fopen("Evan/".$day, "r"); //handle for the file
 
-						echo "<td id=\"Evan\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+						echo "<td id=\"Evan\">"; //Store name as id to be retreived by addChore function (choreBoard.js)
 
-						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (choreBoard.js)
 						while (!feof($file)) { //Makes a list for each of chores for each week day
 							$line = fgets($file);
 							if ($line != "") {
@@ -111,9 +111,9 @@
 						$day = strtolower($day).".txt"; //file name based on day of week
 						$file = fopen("Juan/".$day, "r"); //handle for the file
 
-						echo "<td id=\"Juan\">"; //Store name as id to be retreived by addChore function (EditChores.js)
+						echo "<td id=\"Juan\">"; //Store name as id to be retreived by addChore function (choreBoard.js)
 
-						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (EditChores.js)
+						echo "<ul id=\"".$day."\">"; //Store weekday as id to be retreived by addChore function (choreBoard.js)
 						while (!feof($file)) { //Makes a list for each of chores for each week day
 							$line = fgets($file);
 							if ($line != "") {

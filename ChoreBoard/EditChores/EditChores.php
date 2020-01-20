@@ -43,8 +43,7 @@
 								$line = fgets($file);
 								if ($line != "") {
 									$slash = explode("/", $line);
-									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode,
-									this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id)\">-</button>"."</li>";
+									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode)\">-</button>"."</li>";
 								}
 							}//end while
 							fclose($file);
@@ -81,8 +80,7 @@
 								$line = fgets($file);
 								if ($line != "") {
 									$slash = explode("/", $line);
-									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode,
-									this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id)\">-</button>"."</li>";
+									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode)\">-</button>"."</li>";
 								}
 							}//end while
 							fclose($file);
@@ -118,8 +116,7 @@
 								$line = fgets($file);
 								if ($line != "") {
 									$slash = explode("/", $line);
-									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode,
-									this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id)\">-</button>"."</li>";
+									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode)\">-</button>"."</li>";
 								}
 							}//end while
 							fclose($file);
@@ -155,8 +152,7 @@
 								$line = fgets($file);
 								if ($line != "") {
 									$slash = explode("/", $line);
-									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode,
-									this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id)\">-</button>"."</li>";
+									echo "<li>".$slash[0]."<button class=\"minus-btn\" onclick=\"removeChore(this.parentNode)\">-</button>"."</li>";
 								}
 							}//end while
 							fclose($file);

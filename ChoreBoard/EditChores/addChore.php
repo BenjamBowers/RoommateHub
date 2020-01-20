@@ -4,7 +4,10 @@
     $day = $_POST["day"];
     
 
+
     $file = fopen("../".$person."/".$day, "a+");
+
+    echo "../".$person."/".$day;
 
     if (fgets($file) != "") {
         fwrite($file, "\n".$newChore."/"."u/");

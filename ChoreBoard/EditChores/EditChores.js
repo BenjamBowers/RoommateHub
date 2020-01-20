@@ -7,17 +7,11 @@ function createInputBox(tableCell) {
         if (event.keyCode === 13) {
             event.preventDefault();
 
-            addChore(this.value, this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id);
-
-            /*var minusBtn = document.createElement("button");
-            minusBtn.textContent = "-";
-            minusBtn.className = "minus-btn";
-            minusBtn.onclick = removeChore(this.parentNode, this.parentNode.parentNode.id, this.parentNode.parentNode.parentNode.id);*/
+            addChore(this.value, this.parentNode);
 
             var tempChore = document.createElement("li");
             tempChore.textContent = this.value;
             ul.appendChild(tempChore);
-            //tempChore.appendChild(minusBtn);
             this.parentNode.remove();
         }
     });
@@ -30,10 +24,15 @@ function createInputBox(tableCell) {
 
 }
 
-function addChore(chore, day, person) {
+function addChore(chore, li) {
+    var day = li.parentNode.id; //file name of correct weekday
+    var person = li.parentNode.parentNode.id; //person responsible for chore
+
     console.log(chore);
     console.log(day);
     console.log(person);
+    
+    //Send a POST request to a PHP script that will add the chore to the correct file:
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "http://192.168.1.32/EditChores/addChore.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -41,24 +40,24 @@ function addChore(chore, day, person) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             location.reload();
+            //console.log("Server response: " + this.responseText);
         }
     }
     
 }
 
-function removeChore(li, day, person) {
-    var chore = li.textContent;
+function removeChore(li) {
+    var chore = li.textContent; //The chore to be removed
     var nlIndex = chore.indexOf("-");
-    chore = chore.substring(0, nlIndex);
+    chore = chore.substring(0, nlIndex); //Removing the '-' symbol that unfortunately comes from the button
+    var day = li.parentNode.id; //file name of correct weekday
+    var person = li.parentNode.parentNode.id; //person responsible for chore
 
-    console.log(chore);
-    console.log(person);
-    console.log(day);
-
+    //Send a POST request to a PHP script that will remove the chore from the correct file:
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "http://192.168.1.32/EditChores/removeChore.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("chore=" + chore + "&day=" + day +"&person=" + person);
 
-    li.remove();
+    li.remove(); //Delete the chore from the page
 }
