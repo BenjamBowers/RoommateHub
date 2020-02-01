@@ -34,7 +34,7 @@ function addChore(chore, li) {
     
     //Send a POST request to a PHP script that will add the chore to the correct file:
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "http://192.168.1.32/EditChores/addChore.php", true);
+    xmlhttp.open("POST", "http://192.168.1.32/ChoreBoard/EditChores/addChore.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("chore=" + chore + "&day=" + day +"&person=" + person);
     xmlhttp.onreadystatechange = function() {
@@ -55,7 +55,7 @@ function removeChore(li) {
 
     //Send a POST request to a PHP script that will remove the chore from the correct file:
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "http://192.168.1.32/EditChores/removeChore.php", true);
+    xmlhttp.open("POST", "http://192.168.1.32/ChoreBoard/EditChores/removeChore.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("chore=" + chore + "&day=" + day +"&person=" + person);
 

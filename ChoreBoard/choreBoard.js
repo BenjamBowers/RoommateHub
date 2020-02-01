@@ -19,7 +19,7 @@ const date = new Date();
                 }
 
 				var xmlhttp = new XMLHttpRequest();
-    			xmlhttp.open("POST", "http://192.168.1.32/check.php", true);
+    			xmlhttp.open("POST", "http://192.168.1.32/ChoreBoard/check.php", true);
     			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("checked=" + checked + "&chore=" + chore + "&day=" + day + "&person=" + person);
 
